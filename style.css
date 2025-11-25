@@ -21,6 +21,28 @@ textarea{min-height:120px;resize:vertical}
   padding: 12px;
   border-radius: 10px;
 }
+.success-message {
+    display: none;
+    background: #e8fdf4;
+    color: #05603a;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-bottom: 18px;
+    border: 1px solid #aaf0cd;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.success-message.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
 .submit{width:100%;padding:14px;border-radius:10px;background:var(--accent);color:#fff;font-weight:700;border:0;cursor:pointer;margin-top:8px}
 /* add to style.css */
 .link-btn {
@@ -67,3 +89,4 @@ textarea{min-height:120px;resize:vertical}
 .btn-complete{background:var(--success);color:#fff}
 .btn-delete{background:var(--danger);color:#fff}
 @media (max-width:1050px){.wrap{grid-template-columns:1fr;}.panel{order:2}}
+
