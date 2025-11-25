@@ -108,7 +108,7 @@ $('staffLoginBtn').addEventListener('click', () => {
   const errEl = $('pwError');
   const pw = pwEl ? pwEl.value : '';
 
-  if (pw === 'staff123') {
+  if (pw === 'ep11') {
     if (pwEl) pwEl.value = '';        // clear password
     if (errEl) errEl.style.display = 'none'; // hide error
     $('staffModal').style.display = 'none';
@@ -192,4 +192,5 @@ function deleteReq(item){
   if(!db){ alert('Local data — cannot delete in local demo'); return; }
   if(confirm('Delete this request?')) db.collection('service_requests').doc(item.id).delete();
 }
+
 
