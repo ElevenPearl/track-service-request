@@ -62,7 +62,16 @@ $('submitBtn').addEventListener('click', async ()=>{
   if (db) {
     try {
       await db.collection('service_requests').add(Object.assign({}, payload, { createdAt: firebase.firestore.FieldValue.serverTimestamp() }));
-      alert('Request submitted — thank you!');
+      // show premium animated success message
+const msg = $('successMsg');
+msg.classList.add('show');
+msg.style.display = 'block';
+
+setTimeout(() => {
+    msg.classList.remove('show');
+    setTimeout(() => msg.style.display = 'none', 400);
+}, 3500);
+
       document.querySelectorAll('#customerView input, #customerView textarea').forEach(i=>i.value='');
     } catch(e){ console.error(e); alert('Failed to submit to Firestore (check console)'); }
   } else {
@@ -183,3 +192,4 @@ function deleteReq(item){
   if(!db){ alert('Local data — cannot delete in local demo'); return; }
   if(confirm('Delete this request?')) db.collection('service_requests').doc(item.id).delete();
 }
+
