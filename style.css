@@ -115,18 +115,19 @@ textarea{min-height:120px;resize:vertical}
 @media (max-width:1050px){.wrap{grid-template-columns:1fr;}.panel{order:2}}
 /* Minimal clean footer */
 .simple-footer {
-    width: 100%;
-    text-align: center;
-    margin-top: 60px;
-    padding: 40px 20px;
+    margin-top: 40px;
+    padding: 20px 10px;
     font-size: 13px;
-    color: #6b7280; /* muted gray */
+    text-align: center;
+    color: #6b7280;
     line-height: 1.6;
 }
+
 
 .simple-footer p {
     margin: 4px 0;
 }
+
 
 
 
