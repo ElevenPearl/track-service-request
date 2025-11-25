@@ -21,19 +21,6 @@ textarea{min-height:120px;resize:vertical}
   padding: 12px;
   border-radius: 10px;
 }
-.footer {
-    margin-top: 50px;
-    padding: 25px;
-    text-align: center;
-    font-size: 13px;
-    color: #6b7280;
-    border-top: 1px solid #e5e7eb;
-    background: #fafafa;
-}
-.footer p {
-    margin: 4px 0;
-}
-
 .success-message {
     display: none;
     background: #e8fdf4;
@@ -56,6 +43,7 @@ textarea{min-height:120px;resize:vertical}
     opacity: 1;
     transform: translateY(0);
 }
+
 .submit{width:100%;padding:14px;border-radius:10px;background:var(--accent);color:#fff;font-weight:700;border:0;cursor:pointer;margin-top:8px}
 /* add to style.css */
 .link-btn {
@@ -96,6 +84,7 @@ textarea{min-height:120px;resize:vertical}
     align-items: center;
     justify-content: center;
     z-index: 9999;
+}
 
 .modal-card{width:420px;background:var(--card);border-radius:12px;padding:22px;box-shadow:0 18px 48px rgba(2,6,23,0.12)}
 .modal h2{text-align:center;margin:4px 0 12px}
@@ -113,23 +102,58 @@ textarea{min-height:120px;resize:vertical}
 .btn-complete{background:var(--success);color:#fff}
 .btn-delete{background:var(--danger);color:#fff}
 @media (max-width:1050px){.wrap{grid-template-columns:1fr;}.panel{order:2}}
-/* Minimal clean footer */
-.simple-footer {
-    margin-top: 40px;
-    padding: 20px 10px;
-    font-size: 13px;
+/* PREMIUM FOOTER */
+.premium-footer {
+    width: 100%;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.04);
+    margin-top: 60px;
+}
+
+.footer-inner {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
-    color: #6b7280;
-    line-height: 1.6;
+    color: #475569;
+    font-size: 15px;
+
 }
 
+.footer-logo {
+    width: 38px;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
 
-.simple-footer p {
+.footer-title {
+    font-weight: 100;
+    margin-bottom: 6px;
+    color: #1e293b;
+}
+
+.footer-address,
+.footer-support,
+.footer-copy {
     margin: 4px 0;
+    font-size: 13px;
 }
 
+.footer-support a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
 
+.footer-support a:hover {
+    text-decoration: underline;
+}
 
-
-
-
+.footer-copy {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.7;
+}
