@@ -114,5 +114,58 @@ textarea{min-height:120px;resize:vertical}
 .btn-delete{background:var(--danger);color:#fff}
 @media (max-width:1050px){.wrap{grid-template-columns:1fr;}.panel{order:2}}
 
+/* PREMIUM FOOTER */
+.premium-footer {
+    width: 100%;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.04);
+    margin-top: 60px;
+}
+
+.footer-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: #475569;
+}
+
+.footer-logo {
+    width: 38px;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.footer-title {
+    font-weight: 100;
+    margin-bottom: 6px;
+    color: #1e293b;
+}
+
+.footer-address,
+.footer-support,
+.footer-copy {
+    margin: 4px 0;
+    font-size: 13px;
+}
+
+.footer-support a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-support a:hover {
+    text-decoration: underline;
+}
+
+.footer-copy {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.7;
+
 
 
