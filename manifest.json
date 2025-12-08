@@ -1,6 +1,6 @@
 {
-  "name": "Eleven Pearl",
-  "short_name": "Eleven Pearl",
+  "name": "Track Service Request-Eleven Pearl",
+  "short_name": "Track Service Request",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
