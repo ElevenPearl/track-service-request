@@ -9,8 +9,6 @@
 </head>
 <body>
   <div class="wrap">
-
-
     <div class="panel" id="app">
       <!-- Customer form or Dashboard will render here -->
       <div id="customerView">
@@ -78,55 +76,72 @@
     </div>
   </div>
 
-  <!-- staff login modal (hidden) -->
-  <div id="staffModal" class="modal" style="display:none">
-    <div class="modal-card">
-      <h2>Staff Login</h2>
-      <label style="font-size:13px;color:var(--muted);">&nbsp;&nbsp;Password</label>
-      <input id="staffPw" type="password" placeholder="Enter staff password" />
-        <div id="pwError" style="color:#ef4444; font-size:13px; margin-top:6px; display:none;">
-           &nbsp; Incorrect password
-        </div>
-      <button class="btn" id="staffLoginBtn" style="background:var(--accent);color:#fff">Login</button>
-      <button class="btn gray" id="modalClose">← Back to Customer Portal</button>
-  </div>
-  </div>
+ <!-- staff login modal (username + password) -->
+<div id="staffModal" class="modal" style="display:none">
+  <div class="modal-card">
+    <h2>Staff Login</h2>
 
-  <!-- Firebase compat SDKs (required for Firestore realtime) -->
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-<footer class="premium-footer">
-    <div class="footer-inner">
+    <label style="font-size:13px;color:var(--muted);">&nbsp;&nbsp;Username</label>
+    <input id="staffUser" type="text" placeholder="staffusername" />
 
-        <p class="footer-address">
-            ELEVEN PEARL HOUSE, 35 NO. SHRI DWARKESH IND. CO-OP SOCIETY,
-            UDHNA MAGDALLA ROAD, SURAT (GUJ) 395017
-        </p>
+    <label style="font-size:13px;color:var(--muted);margin-top:6px">&nbsp;&nbsp;Password</label>
+    <input id="staffPw" type="password" placeholder="Enter password" />
 
-        <p class="footer-support">
-            Support: <a href="tel:9898614926">9898614926</a> • 
-            <a href="tel:7802814926">7802814926</a>
-        </p>
-        <p class="footer-copy">© 2025 Eleven Pearl. All rights reserved.</p>
-
+    <div id="pwError" style="color:#ef4444; font-size:13px; margin-top:6px; display:none;">
+       &nbsp; Incorrect username or password
     </div>
+
+    <button class="btn" id="staffLoginBtn" style="background:var(--accent);color:#fff">Login</button>
+    <button class="btn gray" id="modalClose">← Back to Customer Portal</button>
+  </div>
+</div>
+
+<footer class="premium-footer">
+  <div class="footer-inner">
+    <p class="footer-address">
+      ELEVEN PEARL HOUSE, 35 NO. SHRI DWARKESH IND. CO-OP SOCIETY,
+      UDHNA MAGDALLA ROAD, SURAT (GUJ) 395017
+    </p>
+
+    <p class="footer-support">
+      Support: <a href="tel:9898614926">9898614926</a> • 
+      <a href="tel:7802814926">7802814926</a>
+    </p>
+    <p class="footer-copy">© 2025 Eleven Pearl. All rights reserved.</p>
+  </div>
 </footer>
 
-  <script src="script.js"></script>
-    
+<!-- ---------------------------
+     Firebase compat SDKs + config
+     (ONLY one copy of these; placed BEFORE your script.js)
+     --------------------------- -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+
+<script>
+  // ---------- IMPORTANT ----------
+  // Replace the placeholder values below with the Firebase config
+  // found in Firebase Console -> Project Settings -> SDK setup -> Config
+  // Example values look like: apiKey: "AIza...", projectId: "my-project-id", appId: "1:...:web:..."
+  const FIREBASE_CONFIG = {
+    apiKey: "AIzaSyBhrmJTuQCv3NrZFuD_kmmAOpNe1otZUPA",
+  authDomain: "track-service-request.firebaseapp.com",
+  projectId: "track-service-request",
+  storageBucket: "track-service-request.firebasestorage.app",
+  messagingSenderId: "628846867224",
+  appId: "1:628846867224:web:8801f154a222993155e46d",
+  measurementId: "G-5GDVJKSJVN"
+  };
+
+  // Initialize firebase (compat)
+  if (typeof firebase !== 'undefined' && !firebase.apps.length) {
+    firebase.initializeApp(FIREBASE_CONFIG);
+  }
+</script>
+
+<!-- Your script (uses firebase) MUST be after the Firebase scripts above -->
+<script src="script.js"></script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
