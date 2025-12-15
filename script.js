@@ -183,9 +183,29 @@ function renderLists(pending, completed){
   const pList = $('pendingList'); if(pList) pList.innerHTML='';
   pending.forEach(it=>{
     const div = document.createElement('div'); div.className='request';
-    div.innerHTML = `<strong>${escapeHtml(it.name)}</strong><div class=meta>Submitted: ${it.createdAt? (it.createdAt.toDate ? formatDate(it.createdAt.toDate()) : it.createdAt) : ''}</div>
-                    <div class=meta>📞 ${escapeHtml(it.phone)} • ${escapeHtml(it.type)}</div>
-                    <div style='margin-top:8px;color:#0f172a'>Description:<div style='margin-top:6px;color:var(--muted)'>${escapeHtml(it.desc)}</div></div>`;
+    div.innerHTML = `
+  <strong>${escapeHtml(it.name)}</strong>
+
+  <div class="meta">
+    Submitted: ${it.createdAt ? (it.createdAt.toDate ? formatDate(it.createdAt.toDate()) : it.createdAt) : ''}
+  </div>
+
+  <div class="meta">
+    📞 ${escapeHtml(it.phone)} • ${escapeHtml(it.type)}
+  </div>
+
+  <div class="meta">
+    📍 ${escapeHtml(it.address)}
+  </div>
+
+  <div style="margin-top:8px;color:#0f172a">
+    Description:
+    <div style="margin-top:6px;color:var(--muted)">
+      ${escapeHtml(it.desc)}
+    </div>
+  </div>
+`;
+   
     const a = document.createElement('div'); a.className='actions';
     const btn1 = document.createElement('button'); btn1.className='btn-complete'; btn1.textContent='Mark as Completed'; btn1.addEventListener('click', ()=>markCompleted(it));
     const btn2 = document.createElement('button'); btn2.className='btn-delete'; btn2.textContent='Delete'; btn2.addEventListener('click', ()=>deleteReq(it));
@@ -199,7 +219,13 @@ function renderLists(pending, completed){
     const div = document.createElement('div'); div.className='request';
     const who = it.resolvedBy && it.resolvedBy.displayName ? ` • Completed by ${escapeHtml(it.resolvedBy.displayName)}` : '';
     div.innerHTML = `<strong>${escapeHtml(it.name)}</strong><div class=meta>Completed${who}</div>
-                     <div class=meta>📞 ${escapeHtml(it.phone)} • ${escapeHtml(it.type)}</div>
+                     <div class="meta">
+  📞 ${escapeHtml(it.phone)} • ${escapeHtml(it.type)}
+</div>
+<div class="meta">
+  📍 ${escapeHtml(it.address)}
+</div>
+
                      <div style='margin-top:8px;color:#0f172a'>Description:<div style='margin-top:6px;color:var(--muted)'>${escapeHtml(it.desc)}</div></div>`;
     cList.appendChild(div);
   });
@@ -259,3 +285,4 @@ async function deleteReq(item){
     alert('Failed to delete request: '+e.message);
   }
 }
+
