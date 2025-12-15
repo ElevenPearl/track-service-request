@@ -117,6 +117,9 @@ textarea {
 .request{background:#fff;border-radius:10px;padding:14px;border:1px solid #eceff6;margin-bottom:12px}
 .meta{color:var(--muted);font-size:13px;margin-top:8px}
 .actions{margin-top:12px}
+.panel {
+  margin-bottom: 160px !important;
+}
 .actions button{padding:8px 12px;border-radius:8px;border:0;cursor:pointer;margin-right:8px}
 .btn-complete{background:var(--success);color:#fff}
 .btn-delete{background:var(--danger);color:#fff}
@@ -178,6 +181,25 @@ textarea {
     font-size: 12px;
     opacity: 0.7;
 }
+#c_address {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  min-height: 120px !important;
+  height: auto !important;
+  background: #ffffff !important;
+  border: 2px solid #2563eb !important; /* temporary debug border */
+  z-index: 10 !important;
+  position: relative !important;
+}
+.wrap,
+.panel,
+#customerView {
+  overflow: visible !important;
+}
+
+
+
 
 
 
