@@ -10,7 +10,18 @@ html,body{height:100%;margin:0;background:linear-gradient(180deg,#eef6ff 0%, #f8
 .form-field{margin-bottom:14px}
 label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
 input[type=text], input[type=tel], input[type=email], textarea, select{width:100%;padding:12px;border-radius:10px;border:1px solid #e6e8ee;background:#fff;font-size:14px}
-textarea{min-height:50px;resize:vertical}
+textarea {
+  width: 100%;
+  min-height: 90px;      /* IMPORTANT */
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e6e8ee;
+  background: #fff;
+  font-size: 14px;
+  line-height: 1.4;
+  resize: vertical;
+}
+
 
 /* remove border around staff login password */
 #staffPw {
@@ -68,6 +79,9 @@ textarea{min-height:50px;resize:vertical}
   font-size: 14px;
   cursor: pointer;
   transition: 0.2s ease;
+}
+#c_address {
+  min-height: 110px;
 }
 
 #logoutBtn:hover {
@@ -158,4 +172,5 @@ textarea{min-height:50px;resize:vertical}
     font-size: 12px;
     opacity: 0.7;
 }
+
 
