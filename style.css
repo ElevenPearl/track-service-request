@@ -8,6 +8,10 @@ html,body{height:100%;margin:0;background:linear-gradient(180deg,#eef6ff 0%, #f8
 .panel{background:var(--card);border-radius:14px;padding:26px;box-shadow:0 12px 36px rgba(15,23,42,0.06)}
 .panel h1{margin:0 0 14px;font-size:26px;text-align:center}
 .form-field{margin-bottom:14px}
+.form-field {
+  position: relative;
+  z-index: 2;
+}
 label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
 input[type=text], input[type=tel], input[type=email], textarea, select{width:100%;padding:12px;border-radius:10px;border:1px solid #e6e8ee;background:#fff;font-size:14px}
 textarea {
@@ -127,6 +131,8 @@ textarea {
     border-top: 1px solid rgba(0, 0, 0, 0.06);
     box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.04);
     margin-top: 60px;
+    position: relative;
+    z-index: 1;
 }
 
 .footer-inner {
@@ -172,6 +178,7 @@ textarea {
     font-size: 12px;
     opacity: 0.7;
 }
+
 
 
 
