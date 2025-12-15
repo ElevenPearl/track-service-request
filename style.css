@@ -1,17 +1,13 @@
 :root{ --bg:#f3f6fb; --card:#fff; --muted:#6b7280; --accent:#2563eb; --danger:#ef4444; --success:#10b981; --soft:#eef5ff; --radius:12px; font-family: Inter, UI-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;background:linear-gradient(180deg,#eef6ff 0%, #f8fbff 100%);color:#0f172a}
-.wrap{max-width:600px;margin:40px auto;padding:18px;display:block;padding-bottom:120px;}
+.wrap{max-width:600px;margin:40px auto;padding:18px;display:block;}
 .left{display:none;}
 .guide{background:#fff;border-radius:12px;padding:18px;box-shadow:0 8px 30px rgba(15,23,42,0.06)}
 .guide h3{margin:6px 0 12px;font-size:18px}
 .panel{background:var(--card);border-radius:14px;padding:26px;box-shadow:0 12px 36px rgba(15,23,42,0.06)}
 .panel h1{margin:0 0 14px;font-size:26px;text-align:center}
 .form-field{margin-bottom:14px}
-.form-field {
-  position: relative;
-  z-index: 2;
-}
 label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
 input[type=text], input[type=tel], input[type=email], textarea, select{width:100%;padding:12px;border-radius:10px;border:1px solid #e6e8ee;background:#fff;font-size:14px}
 textarea {
@@ -104,9 +100,6 @@ textarea {
 .request{background:#fff;border-radius:10px;padding:14px;border:1px solid #eceff6;margin-bottom:12px}
 .meta{color:var(--muted);font-size:13px;margin-top:8px}
 .actions{margin-top:12px}
-.panel {
-  margin-bottom: 160px !important;
-}
 .actions button{padding:8px 12px;border-radius:8px;border:0;cursor:pointer;margin-right:8px}
 .btn-complete{background:var(--success);color:#fff}
 .btn-delete{background:var(--danger);color:#fff}
@@ -121,8 +114,6 @@ textarea {
     border-top: 1px solid rgba(0, 0, 0, 0.06);
     box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.04);
     margin-top: 60px;
-    position: relative;
-    z-index: 1;
 }
 
 .footer-inner {
@@ -168,6 +159,7 @@ textarea {
     font-size: 12px;
     opacity: 0.7;
 }
+
 
 
 
